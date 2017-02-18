@@ -4,12 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jasmine JASMINE_CONFIG_PATH=jasmine.json",
     "start": "node app"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "jasmine": "^2.5.3",
+    "jasmine-spec-reporter": "^3.2.0",
     "webpack": "^2.2.1"
   }
 }
