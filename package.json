@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "build": "node node_modules/webpack/bin/webpack.js --config example/webpack.config.js",
     "test": "jasmine JASMINE_CONFIG_PATH=jasmine.json",
     "start": "node app"
   },

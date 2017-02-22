@@ -2,11 +2,7 @@ const { resolve } = require('path');
 
 module.exports = {
     entry: {
-        js: './example/index.js',
-        vendor: [
-            'react-dom',
-            'react'
-        ]
+        js: './example/index.js'
     },
     output: {
         filename: 'bundle.js',
@@ -21,12 +17,6 @@ module.exports = {
                     query: {
                         presets: ['es2015', 'react']
                     }
-                }]
-            },
-            {
-                test: /\.pug/,
-                use: [{
-                    loader: 'pug-loader'
                 }]
             }
         ]
