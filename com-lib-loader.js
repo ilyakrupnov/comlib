@@ -1,1 +1,6 @@
-export default source => source; 
+import { writeFile } from 'fs';
+
+export default source => {
+    console.log('lal');
+    return source;
+};

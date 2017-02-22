@@ -1,4 +1,4 @@
-const { resolve } = require('path');
+const { resolve, join } = require('path');
 
 module.exports = {
     entry: {
@@ -8,6 +8,13 @@ module.exports = {
         filename: 'bundle.js',
         path: resolve(__dirname, '.')
     },
+
+    resolveLoader: {
+        alias: {
+            'com-lib-loader': join(__dirname, '../com-lib-loader'),
+        },
+    },
+
     module: {
         rules: [
             {
@@ -18,6 +25,10 @@ module.exports = {
                         presets: ['es2015', 'react']
                     }
                 }]
+            },
+            {
+                test: /\.js/,
+                use: ['com-lib-loader']
             }
         ]
     }
