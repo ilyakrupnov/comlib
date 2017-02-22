@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "node node_modules/webpack/bin/webpack.js --config example/webpack.config.js",
+    "dev": "webpack-dev-server --config example/webpack.config.js --content-base example",
+    "build": "webpack --config example/webpack.config.js",
     "test": "jasmine JASMINE_CONFIG_PATH=jasmine.json",
     "start": "node app"
   },
@@ -17,7 +18,8 @@
     "babel-preset-react": "^6.23.0",
     "jasmine": "^2.5.3",
     "jasmine-spec-reporter": "^3.2.0",
-    "webpack": "^2.2.1"
+    "webpack": "^2.2.1",
+    "webpack-dev-server": "^2.4.1"
   },
   "dependencies": {
     "react": "^15.4.2",
