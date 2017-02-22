@@ -1,1 +1,3 @@
-console.log([1, 2, 3]);
+import loader from './com-lib-loader';
+
+console.log(loader);
